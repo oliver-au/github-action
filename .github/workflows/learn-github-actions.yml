@@ -8,8 +8,13 @@ on:
       branches:
         - main
 jobs:
-  check-bats-version:
-    runs-on: ubuntu-latest
+  Test Code:
+    runs-on: ${{ matrix.os}}
+
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macOS-latest]
+
     steps:
       - uses: actions/checkout@v2
 
