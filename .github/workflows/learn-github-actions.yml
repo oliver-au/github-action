@@ -1,4 +1,4 @@
-name: learn-github-actions-1
+name: react_build
 on: 
   push:
     branches:
@@ -8,7 +8,7 @@ on:
       branches:
         - main
 jobs:
-  test_job:
+  build_job:
     runs-on: ${{ matrix.os}}
 
     strategy:
